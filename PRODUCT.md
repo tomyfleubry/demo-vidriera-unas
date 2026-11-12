@@ -3,7 +3,7 @@
 ## Platform
 web
 ## Stack
-HTML estático, CSS/JS inline, GSAP/ScrollTrigger y LenisCDN; GitHub Pagesmain/raíz fijadosporTomas.
+HTML estático con CSS y JavaScript en el mismo archivo, Lenis por CDN y GitHub Pages desde la raíz de main.
 ## Users
 Personas que buscan diseños y precios de manicura en Villa Crespo, con foto de referencia y turno con seña.
 ## Product Purpose
@@ -19,4 +19,4 @@ Brief de Tomas ../../.pipeline/vidrieras-bruma-uva-brief.md. FotografíasPexelsi
 ## Product Principles
 Diseños entendibles, precios transparentes, reserva clara y cuidado sin promesas de duración universal.
 ## Accessibility & Inclusion
-430px primero, teclado/reducedmotion, filtros visibles envueltos, galería nativa manual y sin overflowde página.
+Diseño revisado a 430 px, filtros operables por teclado, catálogo en grilla y alternativa para movimiento reducido.

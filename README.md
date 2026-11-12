@@ -3,8 +3,8 @@ Vidriera ficticia de Nexvia IA para un estudio de uñas de Villa Crespo.
 
 https://tomyfleubry.github.io/demo-vidriera-unas/
 
-Catálogo alegre: collage de tres fotos, Young Serif y Manrope; cinco diseños
-con filtros y consulta propia por WhatsApp. Carta de precios con puntitos,
+Portada animada con una foto de manicura coral, Young Serif y Manrope. Cinco
+diseños en grilla con filtros y consulta propia por WhatsApp. Carta de precios con puntitos,
 selección de servicio, retiro opcional y cantidades de extras para una suma
 orientativa. Tres etapas del proceso, FAQ y cierre tinta. Sin cobros conectados.
 

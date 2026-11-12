@@ -47,7 +47,7 @@ typography:
     fontWeight: 600
     lineHeight: 1.25
 rounded:
-  collage: "6px"
+  field: "6px"
   gallery: "12px"
   pill: "999px"
   circle: "50%"
@@ -98,7 +98,7 @@ components:
   quantity-input:
     backgroundColor: "{colors.bg}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.collage}"
+    rounded: "{rounded.field}"
     padding: "8px 10px"
     width: "76px"
     height: "44px"
@@ -116,20 +116,20 @@ del frontmatter son normativos; el sidecar amplía estados y ejemplos.
 
 **Creative North Star: "Catálogo alegre"**
 
-Un tablero cálido de fotografías de manos y una carta abierta de precios.
+Una portada con una fotografía de manicura coral y una carta abierta de precios.
 Young Serif recta aporta oficio y personalidad; Manrope mantiene claras las
 descripciones, los importes y las consultas. Crema y tinta sostienen la lectura,
 con coral para las acciones y lila para acompañar el recorrido.
 
 La clienta reconoce un diseño, consulta por ese diseño y puede sumar una
-referencia de precio. El collage tiene solapes y giros pequeños; el resto de la
-página respira con fondos planos, filas abiertas y espacios reconocibles. La
+referencia de precio. Una sola foto ocupa la portada junto al panel lila. El
+resto de la página usa fondos planos, filas abiertas y espacios reconocibles. La
 identidad es propia de Uva y conserva el tono alegre con oficio elegido por Tomas.
 
 **Key Characteristics:**
 
-- Collage de tres fotografías de uñas, con solape y giros mínimos.
-- Catálogo manual filtrable con consulta propia por diseño.
+- Foto protagonista junto al titular sobre lila, con una entrada breve.
+- Catálogo en grilla vertical con filtros y consulta propia por diseño.
 - Carta de precios con puntitos guía y suma orientativa local.
 - Franja lila de proceso, preguntas crema y cierre tinta.
 
@@ -147,7 +147,7 @@ marca el recorrido. Se conservan los cuatro colores fijados en el brief.
 
 - **Lila** (`lilac`): palabra «manos» y hover de filtros y acciones secundarias.
 - **Lila suave** (`soft`): tono bajo existente para filtros, secundarias,
-  flechas de galería y franja de proceso.
+  filtros de galería y franja de proceso.
 
 ### Neutral
 
@@ -202,24 +202,20 @@ tiempos y «desde» es 13 px.
 
 ## Layout
 
-Orden exacto: hero collage, diseños, carta de precios, proceso, preguntas,
+Orden de secciones: portada, diseños, carta de precios, proceso, preguntas,
 reservar y footer. Marco máximo 1220 px, márgenes 40/28/22 px según ancho.
 Header sticky 80/76 px; anclas con margen 104 px; footer con 6rem de reserva
 inferior. Secciones generales con 96/68 px verticales; proceso 52/42 px.
 
-Hero sobre crema: texto y composición de tres fotos en escritorio. En móvil,
-texto y collage compacto se apilan desde 600 px; ninguna foto se monta sobre
-palabras o controles. La foto coral es la mayor, con ondas y
-francesita solapadas suavemente; giros +3°, −4° y −3°. El collage móvil mide
-300 px de alto, o 270 px hasta 400 px, y queda dentro de 430 px. El horario queda
-bajo los botones, no sobre la foto. La línea «Estudio de uñas · Villa Crespo» se
-conserva como contexto del titular, no como pastilla decorativa.
+La portada reúne el texto sobre lila y una foto de manos con manicura coral.
+Desde 650 px hacia abajo, el texto y la foto se apilan. El titular usa coral
+oscuro `#B94E3D` y lila oscuro `#765AA9` para mejorar el contraste.
+El horario queda bajo los botones y la ubicación acompaña el titular.
 
-El estante conserva cinco filtros (Todos, Francesitas, Nail art, Lisos y tonos,
-Efectos), fotografías 4:5 y desplazamiento manual con flechas, teclado y tacto.
-Tres fichas visibles en escritorio, dos en tablet, una y anticipo en móvil.
-Cada foto tiene debajo nombre exacto, texto actual y botón propio; nada tapa la
-imagen. Los filtros se envuelven dentro del marco.
+El catálogo conserva cinco filtros (Todos, Francesitas, Nail art, Lisos y tonos,
+Efectos) y muestra fotografías 4:3 en una grilla de tres, dos o una columna según
+el ancho. Cada foto tiene debajo su nombre, descripción y botón propio. El acceso
+«Ver precios y calcular» lleva desde el catálogo a la carta.
 
 Carta: cinco filas sin tarjetas, máximo 980 px, padding vertical de fila 14 px,
 nombre a izquierda y precio a derecha unidos por puntos. Descripción y duración
@@ -239,28 +235,18 @@ mismo texto; pasa de dos columnas a una desde 900 px. El cierre se apila desde
 
 ## Elevation & Depth
 
-El collage es la única superposición con sombra: contacto difuso de las fotos,
-sin vidrio, cintas falsas, sombras duras ni adorno de tarjetas. Fuera del collage,
-la separación nace del espacio y los fondos planos.
+El espacio y los fondos planos separan los bloques.
 
-### Shadow Vocabulary
-
-- **Contacto de fotografía** (`0 16px 28px rgba(44,33,40,.13)`): sombra difusa
-  exclusiva de las tres fotos del collage.
-
-GSAP/ScrollTrigger 3.12.5 y Lenis 1.1.14 conservan sus CDNs existentes. Entrada
-coordinada de collage/H1/acciones, recorridos de 12/8/4 px, duraciones
-0,9/0,65/0,5 s y easing power2.out. Las cinco fichas del catálogo se revelan con
-12 px, duración 0,6 s y escalonado 0,06 s. Lenis usa duración 0,9 y offset −104 px.
-Nada queda oculto si falla JS. `prefers-reduced-motion` conserva filtros,
-sumador, menú y FAQ, y omite GSAP, Lenis y transiciones. Sin JavaScript se leen
-precios y contenidos, funcionan las cinco consultas estáticas y el scroll
-nativo; filtros, flechas y sumador no se muestran como controles funcionales.
+La foto se descubre de abajo hacia arriba en 880 ms y el titular entra en dos
+tiempos. El filtro revela las fotos en 280 ms y el nuevo importe recibe un realce
+lila de 410 ms. Lenis conserva el desplazamiento suave. Con movimiento reducido,
+la portada, las fotos y los importes se actualizan de forma estática. Sin
+JavaScript quedan visibles los diseños, los precios y los enlaces de WhatsApp.
 
 ## Shapes
 
-Fotos del collage con esquinas discretas de 6 px; fotos de catálogo 12 px;
-acciones y filtros en cápsula. La carta usa líneas abiertas, no tarjetas blancas.
+La portada tiene esquinas de 18 px y las fotos del catálogo de 12 px.
+Las acciones principales y los filtros usan cápsulas. La carta usa líneas abiertas.
 El punteado tiene función de guía entre servicio y precio, solicitado por Tomas.
 
 ## Components
@@ -275,9 +261,8 @@ el cierre tinta el hover usa crema/tinta. Foco visible de 3 px y separación 5 p
 
 Filtros de mínimo 44 px, padding 11×19 px y 17 px horizontales en móvil. Reposo
 lila suave/tinta, seleccionado tinta/crema, hover lila/tinta. `aria-pressed`
-refleja selección y el estado comunica el número visible. Las flechas circulares
-de 44 px se deshabilitan en los límites. Las fichas apilan foto, título,
-descriptor y CTA, sin fondo de tarjeta ni superposición sobre la imagen.
+refleja selección y el estado comunica el número visible. Las fichas apilan
+foto, título, descripción y botón de consulta con borde y radio de 8 px.
 
 ### Catálogo por diseño
 
@@ -327,7 +312,7 @@ WhatsApp estándar actual, cuadrado y sin compresión, no se redibuja.
 
 ### Do:
 
-- **Do** mantener el collage entero dentro de 430 px, sin overflow de página.
+- **Do** mantener la portada y la grilla dentro del ancho de pantalla a 430 px.
 - **Do** preservar títulos de diseños, precios, textos de FAQ y tres href originales.
 - **Do** dejar el CTA por diseño visible bajo su imagen y disponible sin JS.
 - **Do** distinguir subtotal de extras y total con servicio, conservando «desde».
@@ -345,16 +330,14 @@ WhatsApp estándar actual, cuadrado y sin compresión, no se redibuja.
 
 ## Fotografías y procedencia
 
-Selección cerrada ANTES del HTML. Todas las fotografías ya están en assets/ y se
-reutilizan sin descargar sustitutas. Los usos de la tabla corresponden al collage
-y la galería implementados. Son material ilustrativo de Pexels, no
-trabajos reales de una empresa llamada Uva. [Licencia](https://www.pexels.com/license/).
+Las fotografías reutilizadas están en assets/ y son material ilustrativo de
+Pexels. [Licencia](https://www.pexels.com/license/).
 
 | Archivo | Ubicación decidida | Fuente |
 |---|---|---|
-| hero-coral.webp | Foto principal del collage, manos coral | Lazar Gugleta — https://www.pexels.com/photo/hands-of-a-woman-with-orange-nail-polish-11393877/ |
-| diseno-ondas.webp | Foto secundaria del collage y diseño «Ondas de color» | cottonbro studio — https://www.pexels.com/photo/close-up-shot-of-hands-with-colorful-nail-polish-5871824/ |
-| diseno-francesita.webp | Foto secundaria del collage y diseño «Francesita nude» | Roman Titov — https://www.pexels.com/photo/hand-with-french-tip-nails-13038494/ |
+| hero-coral.webp | Foto de portada, manos coral | Lazar Gugleta — https://www.pexels.com/photo/hands-of-a-woman-with-orange-nail-polish-11393877/ |
+| diseno-ondas.webp | Catálogo, «Ondas de color» | cottonbro studio — https://www.pexels.com/photo/close-up-shot-of-hands-with-colorful-nail-polish-5871824/ |
+| diseno-francesita.webp | Catálogo, «Francesita nude» | Roman Titov — https://www.pexels.com/photo/hand-with-french-tip-nails-13038494/ |
 | diseno-mono.webp | Catálogo, «Moño en rosa» | Salim Da — https://www.pexels.com/photo/close-up-of-elegant-manicured-nails-with-floral-design-34885842/ |
 | diseno-rojo.webp | Catálogo, «Rojo de siempre» | Oleskandra Biliak — https://www.pexels.com/photo/close-up-of-a-hand-of-a-woman-with-red-nails-17389258/ |
 | diseno-dorado.webp | Catálogo, «Líneas de luz» | Анастасія — https://www.pexels.com/photo/elegant-nail-art-with-gold-details-in-natural-light-31744665/ |
